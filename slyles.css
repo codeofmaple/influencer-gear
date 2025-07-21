@@ -45,11 +45,17 @@
 .nav-item {
     font-weight: 600;
 }
+.two-side-nav{
+    display: flex;
+    gap: 35px;
+}
 
 .nav-items a {
     text-decoration: none;
     color: var(--primary-color);
-
+}
+.sm-nav{
+    display: none;
 }
 
 /* banner section */
@@ -99,8 +105,8 @@
 }
 
 .bn-img {
-    width: 440px;
-    height: 414px;
+    max-width: 440px;
+    max-height: 414px;
     padding-top: 30px;
     margin-right: 20px;
     scale: 0.95;
@@ -110,15 +116,107 @@
 .sponsors-logos {
     display: flex;
     justify-content: space-evenly;
+    column-gap: 50px;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
-    /* Sets border thickness */
     border-image: linear-gradient(to right,
             transparent 0%,
             #a9a9a9 50%,
             transparent 100%);
     border-image-slice: 1;
-    /* border: 1px solid gray; */
     padding: 36px;
     margin: 100px 9%;
+}
+/* collection section */
+.collection{
+    margin: 0 12%;
+    margin-bottom: 100px;
+    /* border: 1px solid red; */
+}
+/* all-in-one section */
+.all-in-one{
+    margin: 0 calc(12% - 30px);
+}
+/* footer section */
+.footer{
+    width: 100%;
+}
+
+
+/* smartphone styles */
+@media screen and (max-width: 768px) {
+    .nav {
+        margin-top: 35px;
+        flex-direction: column;
+    }
+    .nav-item {
+        display: none;
+    }
+     .logo{
+        display: none;
+     }
+    .two-side-nav{
+        display: none;
+    }
+    .sm-nav{
+        width: 100vw;
+        /* gap: 5%; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .sm-nav li{
+        text-decoration: none;
+        list-style: none;
+        scale: 0.5;
+    }
+    .banner {
+        flex-direction: column-reverse;
+        margin-top: -60px;
+    }
+    .banner-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-top: -100px;
+    }
+    .banner-title {
+        font-size: 1.75rem;
+        margin-bottom: 0px;
+    }
+    .banner-btn {
+        margin-top: 0px;
+    }
+    .banner-img {
+        scale: 60%;
+    }
+    .bn-img{
+        margin-top: 30px;
+        scale: 0.85;
+    }
+    .sponsors-logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px 40px;
+        max-width: 275.21px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        padding: 20px;
+        border: none;
+    }
+    .sponsors-logo {
+        width: 100px;
+        height: auto;
+    }
+    /* collection section */
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+    }
 }
